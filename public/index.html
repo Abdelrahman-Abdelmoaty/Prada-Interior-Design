@@ -3,35 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/public/styles.css" />
+  <link rel="stylesheet" href="styles.css" />
   <title>Prada Interior Design</title>
   <link rel="shortcut icon" href="imgs/p.png" type="image/x-icon">
 </head>
 
-<body class="mb-super w-full font-Montserrat overflow-x-hidden  p-0 m-0">
+<body class="w-[100vw] font-Montserrat overflow-x-hidden  p-0 m-0">
   <!-- header -->
   <header
-    class="w-full shadow-md z-50 fixed top-0 left-0 bg-white flex flex-col lg:flex-row items-center lg:justify-between py-6 lg:py-6 lg:px-40">
+    class="w-[100vw] shadow-md z-[9999] lg:fixed top-0 left-0 bg-white flex flex-col lg:flex-row items-center lg:justify-between py-6 lg:py-6 lg:px-40">
     <!-- logo -->
     <div>
-      <a href="#">
-        <h1 class="text-3xl lg:text-4xl font-bold hover:opacity-80 transition ease-in-out">PRADA</h1>
+      <a href="https://www.linkedin.com/in/abdelrhman-abdelmoaty/" target="_blank">
+        <h1 class="text-4xl font-bold hover:opacity-80 transition ease-in-out">PRADA
+        </h1>
       </a>
     </div>
 
     <!-- social-media -->
     <div class="mt-3 lg:mt-0  gap-4">
-      <ul class="flex items-center">
-        <li class="w-7 lg:w-9 mr-1 hover:scale-110 transition ease-in-out duration-200">
-          <a href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-          </a>
-        </li>
-        <li class="w-7 lg:w-9 mr-1 hover:scale-110 transition ease-in-out duration-200">
-          <a href="#">
+      <ul class="flex items-center flex-wrap lg:w-auto w-[170px] justify-center">
+        <li class="w-11 lg:w-9 mt-2 lg:mt-0 mr-1 hover:scale-110 transition ease-in-out duration-200">
+          <a href="https://www.linkedin.com/in/abdelrhman-abdelmoaty/">
             <svg fill="#3b5998 " viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
               <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -44,8 +37,8 @@
             </svg>
           </a>
         </li>
-        <li class="w-8 lg:w-10 mr-1 hover:scale-110 transition ease-in-out duration-200">
-          <a href="#">
+        <li class="w-12 lg:h-full lg:w-10 mr-1 hover:scale-110 transition ease-in-out duration-200">
+          <a href="https://www.linkedin.com/in/abdelrhman-abdelmoaty/">
             <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
               <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -58,8 +51,8 @@
             </svg>
           </a>
         </li>
-        <li class="w-8 lg:w-10 mr-1 hover:scale-110 transition ease-in-out duration-200">
-          <a href="#">
+        <li class="w-12 lg:w-10 mr-1 hover:scale-110 transition ease-in-out duration-200">
+          <a href="https://www.linkedin.com/in/abdelrhman-abdelmoaty/">
             <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
               <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -78,50 +71,77 @@
             </svg>
           </a>
         </li>
+        <li
+          class="hamburger-menu hover:cursor-pointer w-12 mt-2 lg:mt-0 lg:pl-0 lg:w-9 mr-1 hover:scale-110 transition ease-in-out duration-200">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </li>
+        <ul class="menu fixed  top-0 right-[-256] ease-in-out duration-500 bg-white shadow-md  p-20 text-2xl">
+          <img class="close absolute cursor-pointer top-5 right-5 w-5" src="imgs/close.png" alt="">
+          <li>
+            <a href="https://www.linkedin.com/in/abdelrhman-abdelmoaty/" target="_blank"
+              class="hover:opacity-80">Home</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/abdelrhman-abdelmoaty/" target="_blank"
+              class="hover:opacity-80">About</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/abdelrhman-abdelmoaty/" target="_blank"
+              class="hover:opacity-80">Blog</a>
+          </li>
+        </ul>
       </ul>
     </div>
   </header>
-  <div class="h-[500px] lg:h-[900px] bg-right-bottom bg-cover  bg-[url('../public/imgs/fgg-min.jpg')] ">
-    <div
-      class="h-[500px] lg:h-[900px] bg-gray-950 bg-opacity-25  py-12 px-8 text-white lg:py-52 lg:pl-72 lg:pr-large   ">
-      <h2 class="text-4xl lg:text-7xl lg:mb-8">Visit Our Inspirational Showrooms <span class="font-bold">Today</span>!
-      </h2>
-      <p class=" lg:text-xl tracking-tighter lg:mb-10 lg:leading-8 lg:pr-52 pr-10 mt-5 font-light italic">
-        Sample text. Click to select the text box. Click again or double
-        click to start editing the text. Viverra maecenas accumsan lacus vel
-        facilisis volutpat. Cras fermentum odio eu feugiat pretium nibh.
-      </p>
-      <button
-        class="mt-6 lg:text-2xl border-4 border-white py-5 px-10 font-semibold  hover:bg-white hover:text-black transition duration-500 ease-in-out">LEARN
-        MORE
-      </button>
-    </div>
-  </div>
   <!-- main -->
   <main class="overflow-x-hidden">
+    <div
+      class="hero z-10 relative lg:mt-0 h-[500px] lg:h-[900px]  bg-cover bg-right-bottom lg:bg-bottom  bg-[url('../public/imgs/fgg-min.jpg')] ">
+      <div
+        class="h-[500px] lg:h-[900px] bg-gray-950 bg-opacity-25  py-12 px-8 text-white lg:py-52 lg:pl-72 lg:pr-large   ">
+        <h2 class="relative bottom-[200px] opacity-0 text-4xl lg:text-7xl lg:mb-8">Visit Our Inspirational Showrooms
+          <span class="font-bold">Today</span>!
+        </h2>
+        <p class=" lg:text-2xl tracking-tighter lg:mb-10 lg:leading-8 lg:pr-40 pr-10 mt-5 font-light italic">
+          Explore our curated collections and experience the artistry of design firsthand. Our showrooms are
+          meticulously
+          crafted to inspire your creativity and ignite your passion for interior aesthetics.
+        </p>
+        <button
+          class="mt-6 lg:text-2xl border-4 border-white py-3 px-5 lg:py-5 lg:px-10 font-semibold  hover:bg-white hover:text-black transition duration-500 ease-in-out">LEARN
+          MORE
+        </button>
+      </div>
+    </div>
     <section class="grid grid-cols-1 lg:grid-cols-2 lg:px-72 lg:py-8">
       <div class="py-8 px-8 lg:pr-16 lg:py-12 lg:pb-40">
-        <h3 class=" lg:mb-12 lg:pt-5 mb-5 text-xl font-bold lg:text-4xl">​About Our Building Company</h3>
-        <p class="lg:text-xl">​Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-          ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-          id
-          est laborum.</p>
+        <h3
+          class=" lg:mb-12 lg:pt-5 mb-5 text-xl opacity-0 relative duration-1000 ease-in-out bottom-[200px] font-bold lg:text-4xl">
+          ​About Our
+          Building Company</h3>
+        <p class="lg:text-xl">At our building company, we're dedicated to excellence in every project we undertake.
+          Our mission is to deliver exceptional results, whether it's a new construction, renovation, or any other
+          building endeavor. We take pride in our attention to detail and unwavering dedication to your project's
+          success.
+        </p>
         <button
           class="mt-5 lg:mt-16 lg:text-2xl border-2 bg-white text-black border-[#b1c08b] py-2 px-16 font-semibold  hover:bg-[#b1c08b] hover:text-white transition duration-500 ease-in-out">Learn
           more
         </button>
       </div>
       <div class="py-8 px-8 bg-red relative flex justify-center items-center">
-        <div class="z-10 "><img class="shadow-md h-[450px] w-[300px]  lg:w-[450px] lg:h-[550px]" src="./imgs/fdf.jpg"
-            alt="">
+        <div class="z-10 "><img
+            class="object-cover relative opacity-0 bottom-[500px] shadow-md h-[450px] w-[300px] duration-1000 ease-in-out lg:w-[450px] lg:h-[550px]"
+            src="./imgs/fdf.jpg" alt="">
         </div>
         <div
-          class="absolute top-36 right-36 w-[250px] h-[350px] lg:right-60 lg:top-52 z-5 bg-[#b1c08b] lg:w-[350px] lg:h-[450px]">
+          class="section-1-left absolute top-36 right-36 w-[250px] h-[350px] lg:right-[900px] opacity-0 duration-1000 ease-in-out lg:top-52 z-5 bg-[#b1c08b] lg:w-[350px] lg:h-[450px]">
         </div>
         <div
-          class="absolute bottom-36 left-36 w-[250px] h-[350px] lg:left-60 lg:bottom-36 z-5 bg-[#d9d9d9] lg:w-[350px] lg:h-[400px]">
+          class="section-1-right absolute bottom-36 left-36 w-[250px] h-[350px] duration-1000 ease-in-out  opacity-0 lg:left-[900px] lg:bottom-[144px] z-0 bg-[#d9d9d9] lg:w-[350px] lg:h-[400px]">
         </div>
       </div>
     </section>
@@ -138,12 +158,14 @@
         </div>
       </div>
       <div class="py-8 px-8 lg:pr-16 lg:py-24 lg:px-8">
-        <p class=" lg:mb-5 lg:pt-5 mb-2 text-xl  lg:text-2xl">We focus on ensuring a competitive edge and
+        <p class=" lg:mb-5 lg:pt-5 mb-2 text-2xl font-bold lg:text-2xl">We focus on ensuring a competitive edge and
           strive to make the building process a positive experience for our clients.</p>
-        <p class="font-light">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-          ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-          fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum.</p>
+        <p class="font-light text-xl">We focus on ensuring a competitive edge and strive to make the building process a
+          positive
+          experience for our clients.
+          We understand the unique needs of our clients and tailor our services to exceed their expectations. Our goal
+          is to provide you with the highest level of satisfaction, ensuring that your project is executed flawlessly.
+        </p>
         <button
           class="mt-5 lg:mt-16 lg:text-2xl border-2 bg-white text-black border-[#b1c08b] py-2 px-16 font-semibold  hover:bg-[#b1c08b] hover:text-white transition duration-500 ease-in-out">Learn
           more
@@ -164,9 +186,9 @@
       <div
         class="lg:absolute flex justify-center items-start flex-col z-20 lg:top-52 lg:right-[480px] py-8 px-8 lg:w-[500px] lg:h-[480px]   lg:px-16 bg-white shadow-md">
         <h4 class="lg:text-3xl lg:mb-5  font-bold ">Real-time Visualization</h4>
-        <p class="font-light">Elit ut aliquam purus sit amet luctus venenatis. Ridiculus mus mauris vitae ultricies
-          leo integer malesuada. Massa enim nec dui nunc mattis enim. Sagittis vitae et leo duis ut. Lacus
-          suspendisse faucibus interdum.</p>
+        <p class="font-light">Experience real-time visualization like never before. Our cutting-edge technology allows
+          you to explore your visions with unparalleled clarity and precision.
+        </p>
         <button
           class="mt-5 lg:mt-8 lg:text-2xl border-2 bg-white text-black border-[#b1c08b] py-2 px-16 font-semibold  hover:bg-[#b1c08b] hover:text-white transition duration-500 ease-in-out">Learn
           more
@@ -174,44 +196,42 @@
       </div>
     </section>
     <section
-      class="bg-[url('../public/imgs/fgfgfg.jpg')] bg-cover bg-center bg-no-repeat flex flex-col px-56 py-40 h-[900px] ">
-      <p class="ml-auto w-[800px] mb-10 text-4xl font-bold">​We design & deliver beautiful hotels, luxury homes and
-        innovative
-        workplace
-        interiors</p>
-      <div class="ml-auto w-[800px] flex justify-between ">
-        <div class="flex flex-col gap-y-4 items-center text-center w-64 shadow-lg bg-white px-10 py-14 ">
+      class="bg-[url('../public/imgs/fgfgfg.jpg')] bg-cover bg-left lg:bg-center bg-no-repeat flex flex-col p-10 lg:px-56 lg:py-40 lg:h-[900px] ">
+      <p class="lg:ml-auto lg:w-[840px] lg:mb-16 lg:text-4xl text-2xl font-bold">​We design & deliver beautiful hotels,
+        luxury
+        homes
+        and
+        innovative workplace interiors</p>
+      <div class="lg:ml-auto lg:w-[840px] flex lg:flex-row flex-col justify-between items-center lg:py-0 py-5 gap-y-5">
+        <div class="flex flex-col gap-y-4 items-center text-center lg:w-[270px] shadow-lg bg-white px-10 py-14 ">
           <img class="w-24 " src="../public/imgs/kitchen-table.png" alt="" srcset="">
           <p class="font-bold">PROJECTS</p>
-          <p class="text-gray-500">Sample text. Click to select the text box. Click again or double click to start
-            editing the text.</p>
+          <p class="text-gray-500">Embarking on a Journey of Artistry, Innovation, and Excellence in Design.</p>
         </div>
-        <div class="flex flex-col gap-y-4 items-center text-center w-64 shadow-lg bg-white px-10 py-14 ">
+        <div class="flex flex-col gap-y-4 items-center text-center lg:w-[270px] shadow-lg bg-white px-10 py-14 ">
           <img class="w-24 " src="../public/imgs/interior-design.png" alt="" srcset="">
           <p class="font-bold">GREATE DESIGN</p>
-          <p class="text-gray-500">Sample text. Click to select the text box. Click again or double click to start
-            editing the text.</p>
+          <p class="text-gray-500">Setting the Standard for Creative Excellence, Innovation, and Elegance.</p>
         </div>
-        <div class="flex flex-col gap-y-4 items-center text-center w-64 shadow-lg bg-white px-10 py-14 ">
+        <div class="flex flex-col gap-y-4 items-center text-center lg:w-[270px] shadow-lg bg-white px-10 py-14 ">
           <img class="w-24 " src="../public/imgs/kitchen-table.png" alt="" srcset="">
           <p class="font-bold">HOME DECOR</p>
-          <p class="text-gray-500">Sample text. Click to select the text box. Click again or double click to start
-            editing the text.</p>
+          <p class="text-gray-500">Revitalizing Living Spaces with Elegance, Comfort, and Personalized Style.</p>
         </div>
       </div>
     </section>
-    <section class="p-40 text-center">
+    <section class="lg:p-40 lg:pr-96 text-center">
       <img
-        class="border-white border-[15px] shadow-md inline-block w-[500px] h-[600px] relative left-[400px] bottom-[200px] z-10"
+        class="border-white border-[15px] shadow-md inline-block lg:w-[500px] lg:h-[600px] relative lg:left-[400px] lg:bottom-[200px] z-10"
         src="../public/imgs/painting-hanging-shelf-full-cacti-succulents_53876-110301.jpg" alt="" srcset="">
-      <img class="inline-block w-[350px] shadow-md border-white border-[15px] relative z-20 right-[330px] top-[100px]"
+      <img
+        class="inline-block lg:w-[350px] shadow-md border-white border-[15px] relative z-20 lg:right-[330px] lg:top-[100px]"
         src="../public/imgs/FVG.jpg" alt="">
-      <div class="inline-block bg-gray-100 relative shadow-md top-[100px] text-start px-20 py-32 w-[450px]">
+      <div class="inline-block bg-gray-100 relative shadow-md lg:top-[100px] text-start px-20 py-32 w-[450px]">
         <p class="font-bold text-4xl mb-10">Interior Studio</p>
-        <p class=" text-gray-500">Elit ut aliquam purus sit amet luctus venenatis. Ridiculus mus mauris vitae
-          ultricies leo
-          integer malesuada.
-          Massa enim nec dui nunc mattis enim. Sagittis vitae et leo duis ut. Lacus suspendisse faucibus interdum.
+        <p class=" text-gray-500">Elegance and Innovation in Every Design. Exquisite Creations to Elevate Your Space.
+          Masterpieces Crafted with Attention to Detail. Transforming Your Vision into Reality. Unparalleled Excellence
+          in Interior Design.
         </p>
         <button
           class="border-black border px-4 py-3 mt-10 hover:text-white hover:bg-black duration-300 ease-in-out font-bold text-xl ">LEARN
@@ -219,27 +239,28 @@
       </div>
     </section>
     <section class="overflow-hidden">
-      <div class="w-[25%] h-[450px] float-left relative">
+      <div class="w-[25%] lg:h-[450px] float-left relative">
         <img class="w-full object-cover object-bottom  h-[450px]" src="../public/imgs/pexels-photo-4142982.jpeg" alt=""
           srcset="">
         <div
           class="absolute top-0 h-full w-full left-0 hover:bg-opacity-40 hover:bg-[#000]  z-20 duration-300 ease-in-out hover:cursor-pointer">
         </div>
       </div>
-      <div class="w-[25%] h-[450px] float-left relative">
+      <div class="w-[25%] lg:h-[450px] float-left relative">
         <img class="w-full object-cover object-bottom  h-[450px]" src="../public/imgs/pexels-photo-4207892.jpeg" alt=""
           srcset="">
         <div
           class="absolute top-0 h-full w-full left-0 hover:bg-opacity-40 hover:bg-[#000]  z-20 duration-300 ease-in-out hover:cursor-pointer">
         </div>
       </div>
-      <div class="w-[25%] float-left relative  h-[450px]">
-        <img class="w-full object-cover object-bottom" src="../public/imgs/pexels-photo-905198.jpeg" alt="" srcset="">
+      <div class="w-[25%]   lg:h-[450px] float-left relative">
+        <img class="w-full h-[450px] object-cover object-bottom" src="../public/imgs/pexels-photo-905198.jpeg" alt=""
+          srcset="">
         <div
           class="absolute top-0 h-full w-full left-0 hover:bg-opacity-40 hover:bg-[#000]  z-20 duration-300 ease-in-out hover:cursor-pointer">
         </div>
       </div>
-      <div class="w-[25%] h-[450px] float-left relative">
+      <div class="w-[25%] lg:h-[450px] float-left relative">
         <img class="w-full  object-cover object-bottom h-[450px]"
           src="../public/imgs/painting-hanging-shelf-full-cacti-succulents_53876-110301.jpg" alt="" srcset="">
         <div
@@ -247,16 +268,124 @@
         </div>
       </div>
     </section>
-    <section class="relative">
-      <div>
-        <p>About Design Studio</p>
-        <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+    <section class="relative py-5 lg:py-20">
+      <div class="text-center ">
+        <p class="font-bold text-5xl">About Design Studio</p>
+        <p class="my-5">Elevating Your Vision to Reality. Design Excellence Tailored to You. Transforming Concepts
+          into Masterpieces.
+          Your Dreams, Our Design.</p>
       </div>
-      <div class="absolute"></div>
-      <img src="" alt="" srcset="">
-      <button></button>
+      <div
+        class="absolute lg:w-[514px] flex flex-col items-center justify-center w-full lg:flex-row lg:flex-wrap lg:top-[250px] lg:left-[350px]">
+        <div class="projects shadow-md bg-[#b1c08b] flex flex-col items-center w-[300px] lg:w-[225px] m-4 p-12">
+          <img class="w-[100px] h-[100px]" src="./imgs/project-management.png" alt="" srcset="">
+          <p class="font-bold text-2xl">PROJECTS</p>
+          <p class="count font-extrabold text-4xl">100</p>
+        </div>
+        <div class="clients shadow-md bg-[#b1c08b] flex flex-col items-center w-[300px] lg:w-[225px] m-4 p-12">
+          <img class="w-[100px] h-[100px]" src="./imgs/rating.png" alt="" srcset="">
+          <p class="font-bold text-2xl">PROJECTS</p>
+          <p class="count font-extrabold text-4xl">100</p>
+        </div>
+        <div class="team shadow-md bg-[#b1c08b] flex flex-col items-center w-[300px] lg:w-[225px] m-4 p-12">
+          <img class="w-[100px] h-[100px]" src="./imgs/group.png" alt="" srcset="">
+          <p class="font-bold text-2xl">PROJECTS</p>
+          <p class="count font-extrabold text-4xl">100</p>
+        </div>
+        <div class="awards shadow-md bg-[#b1c08b] flex flex-col items-center w-[300px] lg:w-[225px] m-4 p-12">
+          <img class="w-[100px] h-[100px]" src="./imgs/award.png" alt="" srcset="">
+          <p class="font-bold text-2xl">PROJECTS</p>
+          <p class="count font-extrabold text-4xl">100</p>
+        </div>
+      </div>
+      <img
+        class="h-[1400px] lg:h-[700px] w-[900px] shadow-md object-cover object-right ml-auto lg:mr-[300px] lg:mt-[150px]"
+        src="./imgs/dsddd-min.jpg" alt="" srcset="">
+      <button class="block ml-auto mr-auto mt-[-150px] z-50 relative lg:mt-16 lg:text-2xl border-4 border-[#b1c08b]  py-5 px-10 font-semibold hover:bg-[#b1c08b] hover:text-white transition
+      duration-500 ease-in-out">LEARN MORE</button>
+    </section>
+    <section class="relative lg:px-72 lg:py-10 ">
+      <div class="absolute lg:top-[45%] left-0 bg-[#b1c08b] lg:h-60 z-0 w-full"></div>
+      <div
+        class="inline-block px-10 py-20 shadow-2xl relative lg:left-[150px] z-50 bg-white top-[100px] lg:top-[100px] w-[413px] lg:w-[550px]">
+        <p class="font-bold text-3xl text-center mb-5">Contact Us</p>
+        <form action="">
+          <input placeholder="Enter your name"
+            class="focus:outline-none text-xl mb-5 px-4 py-2 w-full border-b-2 border-black " type="text">
+          <input placeholder="Enter a valid email address"
+            class="focus:outline-none text-xl mb-5 px-4 py-2 w-full border-b-2 border-black " type="text">
+          <input placeholder="Enter your message"
+            class="focus:outline-none text-xl mb-5 px-4 py-2 w-full border-b-2 border-black" type="text">
+          <button class="w-full mt-5 border-none bg-[#657343] text-white hover:bg-black ease-in-out duration-300
+          font-bold text-xl py-4" type="submit">SUBMIT</button>
+        </form>
+      </div>
+      <img
+        class="inline-block lg:w-[600px] h-[800px] lg:h-[800px] object-cover object-bottom  top-[] lg:top-0 relative z-10"
+        src="./imgs/painting-hanging-shelf-full-cacti-succulents_53876-110301.jpg" alt="" srcset="">
     </section>
   </main>
+  <footer
+    class="flex justify-between flex-col lg:flex-row px-5 py-5 items-center bg-[#333333] text-white lg:px-36 lg:py-20 lg:items-start">
+    <div class="flex flex-col items-center gap-y-2 lg:block justify-center">
+      <p class="mb-1">Copyright © 2023 All rights reserved.</p>
+      <a href="https://www.linkedin.com/in/abdelrhman-abdelmoaty/" target="_blank"
+        class="hover:opacity-80">&lt;Developed by / Abdelrhman Abdelmoaty&gt;</a>
+      <ul class="flex items-center gap-x-1 mt-2">
+        <li>
+          <a href="https://www.facebook.com/abdelrhman.abdelmoaty.1" target="_blank"><img
+              class="hover:opacity-80 w-[20px] text-white" src="./imgs/facebook.png" alt="" srcset=""></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/abdelrhman-abdelmoaty/" target="_blank"><img
+              class="hover:opacity-80 w-[22px] text-white" src="./imgs/linkedin.png" alt="" srcset=""></a>
+        </li>
+        <li>
+          <a href="https://github.com/Abdelrhman-Abdelmoaty" target="_blank"><img
+              class="hover:opacity-80 w-[23px] text-white" src="./imgs/github.png" alt="" srcset="">
+          </a>
+        </li>
+      </ul>
+    </div>
+    <table class="text-white table my-8 lg:my-0">
+      <tr>
+        <td class="py-1 px-4 lg:px-20"><a href="https://www.linkedin.com/in/abdelrhman-abdelmoaty/" target="_blank"
+            class="hover:opacity-80">Home</a></td>
+        <td class="py-1 px-4 lg:px-20"><a href="https://www.linkedin.com/in/abdelrhman-abdelmoaty/" target="_blank"
+            class="hover:opacity-80">Terms &
+            Conditions</a></td>
+        <td class="py-1 px-4 lg:px-20"><a href="https://www.linkedin.com/in/abdelrhman-abdelmoaty/" target="_blank"
+            class="hover:opacity-80">Privacy</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="py-1 px-4  lg:px-20"><a href="https://www.linkedin.com/in/abdelrhman-abdelmoaty/" target="_blank"
+            class="hover:opacity-80">About</a></td>
+        <td class="py-1 px-4  lg:px-20"><a href="https://www.linkedin.com/in/abdelrhman-abdelmoaty/" target="_blank"
+            class="hover:opacity-80">FAQ</a></td>
+        <td class="py-1 px-4  lg:px-20"><a href="https://www.linkedin.com/in/abdelrhman-abdelmoaty/" target="_blank"
+            class="hover:opacity-80">Contact us</a></td>
+      </tr>
+      <tr>
+        <td class="py-1 px-4  lg:px-20"><a href="https://www.linkedin.com/in/abdelrhman-abdelmoaty/" target="_blank"
+            class="hover:opacity-80">Blog</a></td>
+        <td class="py-1 px-4  lg:px-20"><a href="https://www.linkedin.com/in/abdelrhman-abdelmoaty/" target="_blank"
+            class="hover:opacity-80">Help Desk</a></td>
+        <td class="py-1 px-4  lg:px-20"><a href="https://www.linkedin.com/in/abdelrhman-abdelmoaty/" target="_blank"
+            class="hover:opacity-80">Newsletter</a></td>
+      </tr>
+      <tr>
+        <td class="py-1 px-4  lg:px-20"><a href="https://www.linkedin.com/in/abdelrhman-abdelmoaty/" target="_blank"
+            class="hover:opacity-80">Portfolio</a></td>
+        <td class="py-1 px-4  lg:px-20"><a href="https://www.linkedin.com/in/abdelrhman-abdelmoaty/" target="_blank"
+            class="hover:opacity-80">Job
+            Applications</a></td>
+        <td class="py-1 px-4  lg:px-20"><a href="https://www.linkedin.com/in/abdelrhman-abdelmoaty/" target="_blank"
+            class="hover:opacity-80">Clients
+            Testimonials</a></td>
+      </tr>
+    </table>
+  </footer>
   <script src="main.js"></script>
 </body>
 
