@@ -588,6 +588,10 @@ video {
   right: -256;
 }
 
+.right-\[900px\]{
+  right: 900px;
+}
+
 .top-0{
   top: 0px;
 }
@@ -836,6 +840,10 @@ video {
 
 .w-full{
   width: 100%;
+}
+
+.transform{
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .cursor-pointer{
@@ -1313,12 +1321,12 @@ video {
     position: absolute;
   }
 
-  .lg\:bottom-16{
-    bottom: 4rem;
-  }
-
   .lg\:bottom-44{
     bottom: 11rem;
+  }
+
+  .lg\:bottom-\[-900px\]{
+    bottom: -900px;
   }
 
   .lg\:bottom-\[144px\]{
@@ -1331,10 +1339,6 @@ video {
 
   .lg\:left-40{
     left: 10rem;
-  }
-
-  .lg\:left-60{
-    left: 15rem;
   }
 
   .lg\:left-\[150px\]{
@@ -1353,20 +1357,20 @@ video {
     left: 900px;
   }
 
-  .lg\:right-60{
-    right: 15rem;
-  }
-
   .lg\:right-96{
     right: 24rem;
   }
 
-  .lg\:right-\[330px\]{
-    right: 330px;
+  .lg\:right-\[-420px\]{
+    right: -420px;
   }
 
-  .lg\:right-\[480px\]{
-    right: 480px;
+  .lg\:right-\[-900\]{
+    right: -900;
+  }
+
+  .lg\:right-\[330px\]{
+    right: 330px;
   }
 
   .lg\:right-\[900px\]{
@@ -1399,10 +1403,6 @@ video {
 
   .lg\:top-\[45\%\]{
     top: 45%;
-  }
-
-  .lg\:right-\[1200px\]{
-    right: 1200px;
   }
 
   .lg\:my-0{
