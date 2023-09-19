@@ -1,0 +1,25 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Build and deploy
+        run: |
+          cd public
+          # Add any build commands here if needed
+          git init
+          git add .
+          git commit -m "Deploy"
+          git push --force --quiet "https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" main:gh-pages
+        env:
+          CI: true
