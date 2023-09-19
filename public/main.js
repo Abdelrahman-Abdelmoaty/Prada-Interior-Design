@@ -24,6 +24,11 @@ document.addEventListener("scroll", () => {
     section_1[1].style.cssText = "right: 240px; opacity:1";
     section_1[2].style.cssText = "bottom: 0; opacity:1";
     section_1[3].style.cssText = "bottom: 0; opacity:1";
+  } else {
+    section_1[0].style.cssText = "left: 900px; opacity:0";
+    section_1[1].style.cssText = "right: 900px; opacity:0";
+    section_1[2].style.cssText = "bottom: 500px; opacity:0";
+    section_1[3].style.cssText = "bottom: 200px; opacity:0";
   }
 });
 
