@@ -40,7 +40,6 @@ const section_6_cards_count = document.querySelectorAll(".section-6-card-count")
 hero.querySelector("h2").style.cssText = "transition:ease-in-out 1s; opacity:1; bottom:0;";
 let counted = false;
 const handleScroll = throttle(() => {
-  console.log("scrolled");
   const scroll = window.scrollY;
   const isLargeScreen = window.innerWidth > 768;
   if (isLargeScreen) {
@@ -94,7 +93,7 @@ const handleScroll = throttle(() => {
     section_4.card_2.style.cssText = "height: 0; opacity: 0;";
     section_4.card_3.style.cssText = "height: 0; opacity: 0;";
   }
-  if (scroll > 1.2 * sections[3].offsetTop) {
+  if (scroll > sections[3].offsetTop) {
     section_5.left.style.cssText = "right:330px; opacity: 1;";
     section_5.middle.style.cssText = "bottom:200px; opacity: 1;";
     section_5.right.style.cssText = "right:0; opacity: 1;";
@@ -109,7 +108,6 @@ const handleScroll = throttle(() => {
     handleCount(2, 32, 70);
     handleCount(3, 15, 120);
     counted = true;
-    console.log("counted");
   }
 });
 

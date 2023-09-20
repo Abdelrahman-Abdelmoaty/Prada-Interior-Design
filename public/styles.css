@@ -640,10 +640,6 @@ video {
   float: left;
 }
 
-.m-0{
-  margin: 0px;
-}
-
 .m-4{
   margin: 1rem;
 }
@@ -1032,10 +1028,6 @@ video {
      object-position: right;
 }
 
-.p-0{
-  padding: 0px;
-}
-
 .p-10{
   padding: 2.5rem;
 }
@@ -1349,6 +1341,10 @@ video {
     bottom: 600px;
   }
 
+  .lg\:left-0{
+    left: 0px;
+  }
+
   .lg\:left-40{
     left: 10rem;
   }
@@ -1391,6 +1387,10 @@ video {
 
   .lg\:right-\[530px\]{
     right: 530px;
+  }
+
+  .lg\:top-0{
+    top: 0px;
   }
 
   .lg\:top-32{
