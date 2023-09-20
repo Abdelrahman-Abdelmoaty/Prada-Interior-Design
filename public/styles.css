@@ -552,8 +552,8 @@ video {
   bottom: 9rem;
 }
 
-.bottom-64{
-  bottom: 16rem;
+.bottom-\[0\]{
+  bottom: 0;
 }
 
 .bottom-\[200px\]{
@@ -588,8 +588,8 @@ video {
   right: -256;
 }
 
-.right-\[900px\]{
-  right: 900px;
+.right-\[200px\]{
+  right: 200px;
 }
 
 .top-0{
@@ -610,10 +610,6 @@ video {
 
 .top-\[100px\]{
   top: 100px;
-}
-
-.top-\[\]{
-  top: ;
 }
 
 .z-0{
@@ -690,6 +686,10 @@ video {
   margin-right: auto;
 }
 
+.mt-1{
+  margin-top: 0.25rem;
+}
+
 .mt-10{
   margin-top: 2.5rem;
 }
@@ -734,6 +734,10 @@ video {
   display: grid;
 }
 
+.h-0{
+  height: 0px;
+}
+
 .h-\[100px\]{
   height: 100px;
 }
@@ -758,8 +762,8 @@ video {
   height: 500px;
 }
 
-.h-\[800px\]{
-  height: 800px;
+.h-\[750px\]{
+  height: 750px;
 }
 
 .h-full{
@@ -1239,6 +1243,14 @@ video {
   transition-duration: 150ms;
 }
 
+.delay-300{
+  transition-delay: 300ms;
+}
+
+.delay-700{
+  transition-delay: 700ms;
+}
+
 .duration-1000{
   transition-duration: 1000ms;
 }
@@ -1325,8 +1337,8 @@ video {
     bottom: 11rem;
   }
 
-  .lg\:bottom-\[-900px\]{
-    bottom: -900px;
+  .lg\:bottom-\[-200px\]{
+    bottom: -200px;
   }
 
   .lg\:bottom-\[144px\]{
@@ -1345,6 +1357,10 @@ video {
     left: 150px;
   }
 
+  .lg\:left-\[200px\]{
+    left: 200px;
+  }
+
   .lg\:left-\[350px\]{
     left: 350px;
   }
@@ -1353,32 +1369,24 @@ video {
     left: 400px;
   }
 
-  .lg\:left-\[900px\]{
-    left: 900px;
-  }
-
   .lg\:right-96{
     right: 24rem;
+  }
+
+  .lg\:right-\[-200\]{
+    right: -200;
   }
 
   .lg\:right-\[-420px\]{
     right: -420px;
   }
 
-  .lg\:right-\[-900\]{
-    right: -900;
+  .lg\:right-\[200px\]{
+    right: 200px;
   }
 
   .lg\:right-\[330px\]{
     right: 330px;
-  }
-
-  .lg\:right-\[900px\]{
-    right: 900px;
-  }
-
-  .lg\:top-0{
-    top: 0px;
   }
 
   .lg\:top-32{
@@ -1391,6 +1399,10 @@ video {
 
   .lg\:top-52{
     top: 13rem;
+  }
+
+  .lg\:top-\[-20px\]{
+    top: -20px;
   }
 
   .lg\:top-\[100px\]{
@@ -1492,10 +1504,6 @@ video {
 
   .lg\:h-\[700px\]{
     height: 700px;
-  }
-
-  .lg\:h-\[800px\]{
-    height: 800px;
   }
 
   .lg\:h-\[900px\]{
