@@ -29,10 +29,16 @@ const section_4 = {
   card_2: sections[3].querySelectorAll(".card")[1],
   card_3: sections[3].querySelectorAll(".card")[2],
 };
+const section_5 = {
+  middle: sections[4].querySelectorAll("img")[0],
+  left: sections[4].querySelectorAll("img")[1],
+  right: sections[4].querySelector("div"),
+};
+const section_6_cards_count = document.querySelectorAll(".section-6-card-count");
 
 // Effects
 hero.querySelector("h2").style.cssText = "transition:ease-in-out 1s; opacity:1; bottom:0;";
-
+let counted = false;
 const handleScroll = throttle(() => {
   console.log("scrolled");
   const scroll = window.scrollY;
@@ -88,7 +94,32 @@ const handleScroll = throttle(() => {
     section_4.card_2.style.cssText = "height: 0; opacity: 0;";
     section_4.card_3.style.cssText = "height: 0; opacity: 0;";
   }
+  if (scroll > 1.2 * sections[3].offsetTop) {
+    section_5.left.style.cssText = "right:330px; opacity: 1;";
+    section_5.middle.style.cssText = "bottom:200px; opacity: 1;";
+    section_5.right.style.cssText = "right:0; opacity: 1;";
+  } else {
+    section_5.left.style.cssText = "right:530px; opacity: 0;";
+    section_5.middle.style.cssText = "top:-100px; opacity: 0;";
+    section_5.right.style.cssText = "right:-200px; opacity: 0;";
+  }
+  if (!counted && scroll > sections[5].offsetTop) {
+    handleCount(0, 86, 40);
+    handleCount(1, 65, 60);
+    handleCount(2, 32, 70);
+    handleCount(3, 15, 120);
+    counted = true;
+    console.log("counted");
+  }
 });
+
+function handleCount(idx, limit, delay) {
+  let count = 0;
+  let interval = setInterval(() => {
+    section_6_cards_count[idx].textContent = count++;
+    if (count > limit) clearInterval(interval);
+  }, delay);
+}
 
 function throttle(cb, delay = 500) {
   let shouldWait = false;

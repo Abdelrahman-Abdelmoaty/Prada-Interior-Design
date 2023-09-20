@@ -1345,8 +1345,8 @@ video {
     bottom: 144px;
   }
 
-  .lg\:bottom-\[200px\]{
-    bottom: 200px;
+  .lg\:bottom-\[600px\]{
+    bottom: 600px;
   }
 
   .lg\:left-40{
@@ -1377,6 +1377,10 @@ video {
     right: -200;
   }
 
+  .lg\:right-\[-200px\]{
+    right: -200px;
+  }
+
   .lg\:right-\[-420px\]{
     right: -420px;
   }
@@ -1385,8 +1389,8 @@ video {
     right: 200px;
   }
 
-  .lg\:right-\[330px\]{
-    right: 330px;
+  .lg\:right-\[530px\]{
+    right: 530px;
   }
 
   .lg\:top-32{
