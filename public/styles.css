@@ -758,10 +758,6 @@ video {
   height: 500px;
 }
 
-.h-\[750px\]{
-  height: 750px;
-}
-
 .h-full{
   height: 100%;
 }
@@ -1053,6 +1049,11 @@ video {
 .px-20{
   padding-left: 5rem;
   padding-right: 5rem;
+}
+
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .px-4{
@@ -1376,6 +1377,10 @@ video {
     position: absolute;
   }
 
+  .lg\:relative{
+    position: relative;
+  }
+
   .lg\:bottom-44{
     bottom: 11rem;
   }
@@ -1561,6 +1566,10 @@ video {
     height: 700px;
   }
 
+  .lg\:h-\[750px\]{
+    height: 750px;
+  }
+
   .lg\:h-\[900px\]{
     height: 900px;
   }
@@ -1655,6 +1664,11 @@ video {
 
   .lg\:p-40{
     padding: 10rem;
+  }
+
+  .lg\:px-0{
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .lg\:px-10{
