@@ -150,3 +150,8 @@ const handleScroll = throttle(() => {
   }
 });
 document.addEventListener("scroll", handleScroll);
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector("#preloader").style.display = "none";
+  console.log("load");
+});
