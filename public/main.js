@@ -46,7 +46,7 @@ let counted = false;
 
 const options = {
   rootMargin: "0px",
-  threshold: 0.3,
+  threshold: 0.1,
 };
 
 const observer = new IntersectionObserver((entries, observer) => {
