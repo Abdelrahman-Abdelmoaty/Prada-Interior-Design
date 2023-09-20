@@ -35,80 +35,77 @@ const section_5 = {
   right: sections[4].querySelector("div"),
 };
 const section_6_cards_count = document.querySelectorAll(".section-6-card-count");
+const section_7 = {
+  left: sections[7].querySelector(".form"),
+  right: sections[7].querySelector("img"),
+};
 
 // Effects
 hero.querySelector("h2").style.cssText = "transition:ease-in-out 1s; opacity:1; bottom:0;";
 let counted = false;
-const handleScroll = throttle(() => {
-  const scroll = window.scrollY;
-  const isLargeScreen = window.innerWidth > 768;
-  if (isLargeScreen) {
-    if (scroll > 70) {
-      header.style.cssText = "transition: ease-in-out 0.5s; padding-bottom:0.75rem; padding-top:0.75rem;";
-    } else {
-      header.style.cssText = "transition: ease-in-out 0.5s; padding-bottom:1.5rem; padding-top:1.5rem;";
+
+const options = {
+  rootMargin: "0px",
+  threshold: 0.3,
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    const target = entry.target;
+    const isLargeScreen = window.innerWidth > 768;
+
+    if (entry.isIntersecting) {
+      if (isLargeScreen) {
+        if (target === sections[0]) {
+          header.style.cssText = "transition: ease-in-out 0.5s; padding-bottom:0.75rem; padding-top:0.75rem;";
+        } else {
+          header.style.cssText = "transition: ease-in-out 0.5s; padding-bottom:1.5rem; padding-top:1.5rem;";
+        }
+      }
+
+      if (target === sections[0]) {
+        section_1.right.style.cssText = "left: 240px; opacity:1";
+        section_1.left.style.cssText = "right: 240px; opacity:1";
+        section_1.img.style.cssText = "bottom: 0; opacity:1";
+        section_1.h3.style.cssText = "bottom: 0; opacity:1";
+      } else if (target === sections[1]) {
+        section_2.right.style.cssText = "left: 240px; opacity:1";
+        section_2.left.style.cssText = "right: 240px; opacity:1";
+        section_2.img.style.cssText = "bottom: 0; opacity:1";
+        section_2.h3.style.cssText = "bottom: 0; opacity:1";
+      } else if (target === sections[2]) {
+        section_3.top.style.cssText = "right: 384px; opacity:1;";
+        section_3.bottom.style.cssText = "bottom: 64px; opacity:1;  transform: rotate(360deg);";
+        section_3.img.style.cssText = "right: 0; opacity:1";
+        section_3.card.style.cssText = "right: 480px; opacity:1";
+      } else if (target === sections[3]) {
+        section_4.p.style.cssText = "bottom: 0; opacity:1;";
+        section_4.card_1.style.cssText = "height: 360px; opacity: 1;";
+        section_4.card_2.style.cssText = "height: 360px; opacity: 1;";
+        section_4.card_3.style.cssText = "height: 360px; opacity: 1;";
+      } else if (target === sections[4]) {
+        section_5.left.style.cssText = "right:330px; opacity: 1;";
+        section_5.middle.style.cssText = "bottom:200px; opacity: 1;";
+        section_5.right.style.cssText = "right:0; opacity: 1;";
+      } else if (target === sections[5]) {
+        if (!counted) {
+          handleCount(0, 86, 40);
+          handleCount(1, 65, 60);
+          handleCount(2, 32, 70);
+          handleCount(3, 15, 120);
+          counted = true;
+        }
+      } else if (target === sections[7]) {
+        console.log(section_7.right);
+        section_7.left.style.cssText = "left: 150px; opacity: 1;";
+        section_7.right.style.cssText = "right: 0; opacity: 1;";
+      }
     }
-  }
-  if (scroll > 1.2 * hero.offsetTop) {
-    section_1.right.style.cssText = "left: 240px; opacity:1";
-    section_1.left.style.cssText = "right: 240px; opacity:1";
-    section_1.img.style.cssText = "bottom: 0; opacity:1";
-    section_1.h3.style.cssText = "bottom: 0; opacity:1";
-  } else {
-    section_1.right.style.cssText = "left: 200px; opacity:0";
-    section_1.left.style.cssText = "right: 200px; opacity:0";
-    section_1.img.style.cssText = "bottom: 500px; opacity:0";
-    section_1.h3.style.cssText = "bottom: 200px; opacity:0";
-  }
-  if (scroll > 1.2 * sections[0].offsetTop) {
-    section_2.right.style.cssText = "left: 240px; opacity:1";
-    section_2.left.style.cssText = "right: 240px; opacity:1";
-    section_2.img.style.cssText = "bottom: 0; opacity:1";
-    section_2.h3.style.cssText = "bottom: 0; opacity:1";
-  } else {
-    section_2.right.style.cssText = "left: 200px; opacity:0";
-    section_2.left.style.cssText = "right: 200px; opacity:0";
-    section_2.img.style.cssText = "bottom: 500px; opacity:0";
-    section_2.h3.style.cssText = "bottom: 200px; opacity:0";
-  }
-  if (scroll > 1.2 * sections[1].offsetTop) {
-    section_3.top.style.cssText = "right: 384px; opacity:1;";
-    section_3.bottom.style.cssText = "bottom: 64px; opacity:1;  transform: rotate(360deg);";
-    section_3.img.style.cssText = "right: 0; opacity:1";
-    section_3.card.style.cssText = "right: 480px; opacity:1";
-  } else {
-    section_3.top.style.cssText = "right: -200px; opacity:0";
-    section_3.bottom.style.cssText = "bottom: -200px; opacity:0";
-    section_3.img.style.cssText = "right: 200px; opacity:0";
-    section_3.card.style.cssText = "left: -420px; opacity:0";
-  }
-  if (scroll > 1.2 * sections[2].offsetTop) {
-    section_4.p.style.cssText = "bottom: 0; opacity:1;";
-    section_4.card_1.style.cssText = "height: 360px; opacity: 1;";
-    section_4.card_2.style.cssText = "height: 360px; opacity: 1;";
-    section_4.card_3.style.cssText = "height: 360px; opacity: 1;";
-  } else {
-    section_4.p.style.cssText = "bottom: 200px; opacity:0;";
-    section_4.card_1.style.cssText = "height: 0; opacity: 0;";
-    section_4.card_2.style.cssText = "height: 0; opacity: 0;";
-    section_4.card_3.style.cssText = "height: 0; opacity: 0;";
-  }
-  if (scroll > sections[3].offsetTop) {
-    section_5.left.style.cssText = "right:330px; opacity: 1;";
-    section_5.middle.style.cssText = "bottom:200px; opacity: 1;";
-    section_5.right.style.cssText = "right:0; opacity: 1;";
-  } else {
-    section_5.left.style.cssText = "right:530px; opacity: 0;";
-    section_5.middle.style.cssText = "top:-100px; opacity: 0;";
-    section_5.right.style.cssText = "right:-200px; opacity: 0;";
-  }
-  if (!counted && scroll > sections[5].offsetTop) {
-    handleCount(0, 86, 40);
-    handleCount(1, 65, 60);
-    handleCount(2, 32, 70);
-    handleCount(3, 15, 120);
-    counted = true;
-  }
+  });
+}, options);
+
+sections.forEach((section) => {
+  observer.observe(section);
 });
 
 function handleCount(idx, limit, delay) {
@@ -119,37 +116,10 @@ function handleCount(idx, limit, delay) {
   }, delay);
 }
 
-function throttle(cb, delay = 500) {
-  let shouldWait = false;
-  let waitingArgs;
-  const timeoutFunc = () => {
-    if (waitingArgs == null) {
-      shouldWait = false;
-    } else {
-      cb(...waitingArgs);
-      waitingArgs = null;
-      setTimeout(timeoutFunc, delay);
-    }
-  };
-
-  return (...args) => {
-    if (shouldWait) {
-      waitingArgs = args;
-      return;
-    }
-
-    cb(...args);
-    shouldWait = true;
-
-    setTimeout(timeoutFunc, delay);
-  };
-}
-
-document.addEventListener("scroll", handleScroll);
-
 hamburgerMenu.addEventListener("click", () => {
   menu.style.right = 0;
 });
+
 closeBtn.addEventListener("click", () => {
   menu.style.right = -256;
 });

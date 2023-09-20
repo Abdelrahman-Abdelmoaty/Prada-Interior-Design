@@ -1349,8 +1349,8 @@ video {
     left: 10rem;
   }
 
-  .lg\:left-\[150px\]{
-    left: 150px;
+  .lg\:left-\[-150px\]{
+    left: -150px;
   }
 
   .lg\:left-\[200px\]{
