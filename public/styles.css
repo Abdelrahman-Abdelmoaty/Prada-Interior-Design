@@ -1263,6 +1263,44 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+#preloader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+#preloader span {
+  font-size: 80px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  line-height: 1;
+  mix-blend-mode: difference;
+}
+
+#preloader::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  background-color: white;
+  animation: move 4s linear infinite;
+}
+
+@keyframes move {
+  0%,
+  100% {
+    left: 0;
+  }
+
+  50% {
+    left: calc(100% - 100px);
+  }
+}
+
 .hover\:scale-110:hover{
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
