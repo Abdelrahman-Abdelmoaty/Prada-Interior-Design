@@ -49,20 +49,10 @@ const options = {
   threshold: 0.1,
 };
 
-const observer = new IntersectionObserver((entries, observer) => {
+const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     const target = entry.target;
-    const isLargeScreen = window.innerWidth > 768;
-
     if (entry.isIntersecting) {
-      if (isLargeScreen) {
-        if (target === sections[0]) {
-          header.style.cssText = "transition: ease-in-out 0.5s; padding-bottom:0.75rem; padding-top:0.75rem;";
-        } else {
-          header.style.cssText = "transition: ease-in-out 0.5s; padding-bottom:1.5rem; padding-top:1.5rem;";
-        }
-      }
-
       if (target === sections[0]) {
         section_1.right.style.cssText = "left: 240px; opacity:1";
         section_1.left.style.cssText = "right: 240px; opacity:1";
@@ -96,7 +86,6 @@ const observer = new IntersectionObserver((entries, observer) => {
           counted = true;
         }
       } else if (target === sections[7]) {
-        console.log(section_7.right);
         section_7.left.style.cssText = "left: 150px; opacity: 1;";
         section_7.right.style.cssText = "right: 0; opacity: 1;";
       }
@@ -123,3 +112,41 @@ hamburgerMenu.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
   menu.style.right = -256;
 });
+
+function throttle(cb, delay = 500) {
+  let shouldWait = false;
+  let waitingArgs;
+  const timeoutFunc = () => {
+    if (waitingArgs == null) {
+      shouldWait = false;
+    } else {
+      cb(...waitingArgs);
+      waitingArgs = null;
+      setTimeout(timeoutFunc, delay);
+    }
+  };
+
+  return (...args) => {
+    if (shouldWait) {
+      waitingArgs = args;
+      return;
+    }
+
+    cb(...args);
+    shouldWait = true;
+
+    setTimeout(timeoutFunc, delay);
+  };
+}
+const handleScroll = throttle(() => {
+  const scroll = window.scrollY;
+  const isLargeScreen = window.innerWidth > 768;
+  if (isLargeScreen) {
+    if (scroll > 70) {
+      header.style.cssText = "transition: ease-in-out 0.5s; padding-bottom:0.75rem; padding-top:0.75rem;";
+    } else {
+      header.style.cssText = "transition: ease-in-out 0.5s; padding-bottom:1.5rem; padding-top:1.5rem;";
+    }
+  }
+});
+document.addEventListener("scroll", handleScroll);
