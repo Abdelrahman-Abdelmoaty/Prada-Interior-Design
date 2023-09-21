@@ -89,7 +89,7 @@ const handleScroll = throttle(() => {
     section_2.img.classList.remove("move-down");
     section_2.h3.classList.remove("text-move-down");
   }
-  if (sectionsRevealTop[2] < windowHeight - revealPoint && -sectionsRevealTop[2] < windowHeight - hidePoint) {
+  if (sectionsRevealTop[2] < windowHeight - (isLargeScreen ? revealPoint : 500) && -sectionsRevealTop[2] < windowHeight - hidePoint) {
     section_3.top.classList.add("move-to-right");
     section_3.bottom.classList.add("move-up");
     section_3.img.classList.add("move-to-right");
@@ -100,7 +100,7 @@ const handleScroll = throttle(() => {
     section_3.img.classList.remove("move-to-right");
     section_3.card.classList.remove("move-to-left");
   }
-  if (sectionsRevealTop[3] < windowHeight - revealPoint && -sectionsRevealTop[3] < windowHeight - hidePoint) {
+  if (sectionsRevealTop[3] < windowHeight - (isLargeScreen ? revealPoint : 500) && -sectionsRevealTop[3] < windowHeight - hidePoint) {
     section_4.p.classList.add("move-down");
     section_4.card_1.classList.add("move-up");
     section_4.card_2.classList.add("move-down");
@@ -111,16 +111,18 @@ const handleScroll = throttle(() => {
     section_4.card_2.classList.remove("card-show");
     section_4.card_3.classList.remove("card-show");
   }
-  if (sectionsRevealTop[4] < windowHeight - revealPoint && -sectionsRevealTop[4] < windowHeight - hidePoint) {
+  if (sectionsRevealTop[4] < windowHeight - (isLargeScreen ? revealPoint : 500) && -sectionsRevealTop[4] < windowHeight - (isLargeScreen ? revealPoint : -100)) {
+    console.log("in");
     section_5.left.classList.add("move-to-right");
     section_5.middle.classList.add("move-down");
     section_5.right.classList.add("move-to-left");
   } else {
+    console.log("out");
     section_5.left.classList.remove("move-to-right");
     section_5.middle.classList.remove("move-down");
     section_5.right.classList.remove("move-to-left");
   }
-  if (sectionsRevealTop[6] < windowHeight - revealPoint && -sectionsRevealTop[6] < windowHeight - hidePoint) {
+  if (sectionsRevealTop[6] < windowHeight - (isLargeScreen ? revealPoint : 500) && -sectionsRevealTop[6] < windowHeight - hidePoint) {
     if (!counted) {
       handleCount(0, 86, 20);
       handleCount(1, 65, 30);
@@ -129,7 +131,7 @@ const handleScroll = throttle(() => {
       counted = true;
     }
   }
-  if (sectionsRevealTop[7] < windowHeight - revealPoint && -sectionsRevealTop[7] < windowHeight - hidePoint) {
+  if (sectionsRevealTop[7] < windowHeight - (isLargeScreen ? revealPoint : 500) && (!isLargeScreen || -sectionsRevealTop[7] < windowHeight - hidePoint)) {
     section_7.left.classList.add("move-to-right");
     section_7.right.classList.add("move-to-left");
   } else {

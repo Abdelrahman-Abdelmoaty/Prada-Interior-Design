@@ -740,6 +740,10 @@ video {
   display: grid;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-\[100px\] {
   height: 100px;
 }
@@ -1134,10 +1138,6 @@ video {
 
 .text-start {
   text-align: start;
-}
-
-.font-Montserrat {
-  font-family: Montserrat;
 }
 
 .text-2xl {
