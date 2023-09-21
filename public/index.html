@@ -6,6 +6,11 @@
   <link rel="stylesheet" href="build.css" />
   <title>Prada Interior Design</title>
   <link rel="shortcut icon" href="imgs/p.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body class=font-Montserrat">
@@ -13,7 +18,7 @@
     <div><span>Loading</span></div>
   </div>
   <header class="w-[100vw] shadow-md z-[9999] lg:fixed lg:top-0 lg:left-0 bg-white flex flex-col lg:flex-row items-center
-  lg:justify-between py-6 lg:py-6 lg:px-40">
+  lg:justify-between duration-500 ease-in-out py-6 lg:py-6 lg:px-40">
     <div>
       <a href="https://www.linkedin.com/in/abdelrhman-abdelmoaty/" target="_blank">
         <h1 class="text-4xl font-bold hover:opacity-80 duration-500 ease-in-out">PRADA
@@ -77,7 +82,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
         </li>
-        <ul class="menu fixed  top-0 right-[-256] ease-in-out duration-500 bg-white shadow-md  p-20 text-2xl">
+        <ul class="menu fixed  top-0 right-[-256px] ease-in-out duration-500 bg-white shadow-md  p-20 text-2xl">
           <img class="close absolute cursor-pointer top-5 right-5 w-5" src="imgs/close.png" alt="">
           <li>
             <img class="w-[20px] inline-block mb-1" src="./imgs/home.png" alt="">
@@ -101,10 +106,10 @@
   <!-- main -->
   <main class="overflow-x-hidden">
     <div
-      class="hero  z-10 relative lg:mt-0 h-[500px] lg:h-[900px]  bg-cover bg-right-bottom lg:bg-bottom  bg-[url('../public/imgs/fgg-min.jpg')] ">
+      class="hero  z-10 relative lg:mt-0 h-[500px] lg:h-[900px] bg-cover bg-right-bottom lg:bg-bottom  bg-[url('../public/imgs/fgg-min.jpg')] ">
       <div
         class="h-[500px] lg:h-[900px] bg-gray-950 bg-opacity-25  py-12 px-8 text-white lg:py-52 lg:pl-72 lg:pr-large   ">
-        <h2 class="relative bottom-[200px] opacity-0 text-4xl lg:text-7xl lg:mb-8">Visit Our Inspirational Showrooms
+        <h2 class="text-4xl lg:text-7xl lg:mb-8 set-text-move-down">Visit Our Inspirational Showrooms
           <span class="font-bold">Today</span>!
         </h2>
         <p class=" lg:text-2xl tracking-tighter lg:mb-10 lg:leading-8 lg:pr-40 pr-10 mt-5 font-light italic">
@@ -112,7 +117,7 @@
           meticulously
           crafted to inspire your creativity and ignite your passion for interior aesthetics.
         </p>
-        <button
+        <button type="button"
           class="mt-6 lg:text-2xl border-4 border-white py-3 px-5 lg:py-5 lg:px-10 font-semibold  hover:bg-white hover:text-black transition duration-500 ease-in-out">LEARN
           MORE
         </button>
@@ -120,8 +125,7 @@
     </div>
     <section class="grid grid-cols-1 lg:grid-cols-2 lg:px-72 lg:py-8">
       <div class="py-8 px-8 lg:pr-16 lg:py-12 lg:pb-40">
-        <h3
-          class=" lg:mb-12 lg:pt-5 mb-5 text-xl opacity-0 relative duration-1000 ease-in-out bottom-[200px] font-bold lg:text-4xl">
+        <h3 class="lg:mb-12 lg:pt-5 mb-5 text-xl font-bold lg:text-4xl set-text-move-down">
           ​About Our
           Building Company</h3>
         <p class="lg:text-xl">At our building company, we're dedicated to excellence in every project we undertake.
@@ -129,40 +133,36 @@
           building endeavor. We take pride in our attention to detail and unwavering dedication to your project's
           success.
         </p>
-        <button
-          class="mt-5 lg:mt-16 lg:text-2xl border-2 bg-white text-black border-[#b1c08b] py-2 px-16 font-semibold  hover:bg-[#b1c08b] hover:text-white transition duration-500 ease-in-out">LEARN
+        <button type="button"
+          class="mt-5 lg:mt-16 lg:text-2xl border-2 bg-white text-black border-[#b1c08b] py-2 px-16 font-semibold  hover:bg-[#b1c08b] hover:text-white transition duration-500 ease-in-out relative z-50">LEARN
           MORE
         </button>
       </div>
       <div class="py-8 px-8 bg-red relative flex justify-center items-center">
-        <div class="z-10 "><img
-            class="object-cover relative opacity-0 bottom-[500px] shadow-md h-[450px] w-[300px] duration-1000 ease-in-out lg:w-[450px] lg:h-[550px]"
-            src="./imgs/fdf.jpg" alt="">
+        <img class="relative z-20 object-cover shadow-md h-[450px] w-[300px] lg:w-[450px] lg:h-[550px] 
+        set-move-down" src="./imgs/fdf.jpg" alt="">
+        <div
+          class="section-1-left absolute z-10 top-32 right-[240px] w-[250px] h-[350px] lg:top-44 bg-[#b1c08b] lg:w-[350px] lg:h-[450px] set-move-to-right">
         </div>
         <div
-          class="section-1-left absolute top-36 right-36 w-[250px] h-[350px] lg:right-[200px] opacity-0 duration-1000 ease-in-out lg:top-52 z-5 bg-[#b1c08b] lg:w-[350px] lg:h-[450px]">
-        </div>
-        <div
-          class="section-1-right absolute bottom-36 left-36 w-[250px] h-[350px] duration-1000 ease-in-out  opacity-0 lg:left-[200px] lg:bottom-[144px] z-0 bg-[#d9d9d9] lg:w-[350px] lg:h-[400px]">
+          class="section-1-right absolute z-10 bottom-36 left-[240px] w-[250px] h-[350px] bg-[#d9d9d9] lg:w-[350px] lg:h-[400px] set-move-to-left">
         </div>
       </div>
     </section>
     <section class="grid grid-cols-1 lg:grid-cols-2 lg:px-72 lg:py-8">
       <div class="py-8 px-8 bg-red relative flex justify-center items-center">
-        <div class="z-10 "><img
-            class="relative bottom-[500px] opacity-0 duration-1000 ease-in-out shadow-md h-[450px] w-[300px]  lg:w-[450px] lg:h-[550px]"
-            src="./imgs/gh.jpg" alt="">
+        <div class="z-10 ">
+          <img class="shadow-md h-[450px] w-[300px] lg:w-[450px] lg:h-[550px] set-move-down" src="./imgs/gh.jpg" alt="">
         </div>
         <div
-          class="section-2-left absolute top-36 right-36 w-[250px] h-[350px] lg:right-[200px] duration-1000 ease-in-out opacity-0 lg:bottom-44 z-5 bg-[#d9d9d9] lg:w-[350px] lg:h-[450px]">
+          class="section-2-left absolute top-36 right-36 w-[250px] h-[350px] lg:right-[250px] lg:bottom-44 z-5 bg-[#d9d9d9] lg:w-[350px] lg:h-[450px] set-move-to-right">
         </div>
         <div
-          class="section-2-right absolute bottom-36 left-36 w-[250px] h-[350px] duration-1000 ease-in-out lg:left-[200px] opacity-0 lg:top-36 z-5 bg-[#b1c08b] lg:w-[350px] lg:h-[400px]">
+          class="section-2-right absolute bottom-36 left-40 w-[250px] h-[350px] lg:left-[230px] lg:top-36 z-5 bg-[#b1c08b] lg:w-[350px] lg:h-[400px] set-move-to-left">
         </div>
       </div>
       <div class="py-8 px-8 lg:pr-16 lg:py-24 lg:px-8">
-        <h3
-          class="relative bottom-[200px] duration-1000 ease-in-out opacity-0 lg:mb-5 lg:pt-5 mb-2 text-2xl font-bold lg:text-2xl">
+        <h3 class="lg:mb-5 lg:pt-5 mb-2 text-2xl font-bold lg:text-2xl set-text-move-down">
           We focus on ensuring a
           competitive edge
           and
@@ -173,7 +173,7 @@
           We understand the unique needs of our clients and tailor our services to exceed their expectations. Our goal
           is to provide you with the highest level of satisfaction, ensuring that your project is executed flawlessly.
         </p>
-        <button
+        <button type="button"
           class="mt-5 lg:mt-16 lg:text-2xl border-2 bg-white text-black border-[#b1c08b] py-2 px-16 font-semibold  hover:bg-[#b1c08b] hover:text-white transition duration-500 ease-in-out">LEARN
           MORE
         </button>
@@ -181,23 +181,24 @@
     </section>
     <section class="grid grid-cols-1 lg:grid-cols-2 lg:px-64 lg:py-20 relative">
       <div
-        class="absolute lg:top-32 lg:right-[-200] w-[150px] h-[150px] duration-1000 ease-in-out opacity-1 section-3-top top-[-50px] right-2 lg:w-[250px] lg:h-[250px] z-5 rounded-full bg-[#d9d9d9]">
+        class="absolute lg:top-28 lg:right-[400px] w-[150px] h-[150px] section-3-top top-[-50px] right-2 lg:w-[250px] lg:h-[250px] z-5 rounded-full bg-[#d9d9d9] set-move-to-right">
       </div>
       <div
-        class="absolute  w-[300px] bottom-[0] right-36 h-[100px] section-3-bottom duration-1000 ease-in-out opacity-0 lg:bottom-[-200px] lg:right-96 lg:w-[700px] lg:h-[250px] z-5 bg-[#b1c08b]">
+        class="absolute  w-[300px] bottom-[0] right-36 h-[100px] section-3-bottom lg:bottom-[100px] lg:right-96 lg:w-[700px] lg:h-[250px] z-5 bg-[#b1c08b] set-move-up">
       </div>
       <div class="flex justify-center items-center relative lg:block z-10  lg:left-40 col-span-2 ">
         <img
-          class="shadow-md relative right-[200px] duration-1000 ease-in-out opacity-0  h-[450px] w-[350px] lg:h-[650px] lg:w-[700px]  object-cover "
+          class="shadow-md lg:relative lg:right-[100px]  h-[450px] w-[350px] lg:h-[650px] lg:w-[700px]  object-cover set-move-to-right"
           src="./imgs/FVG.jpg" alt="">
       </div>
       <div
-        class="section-3-card relative duration-1000 opacity-0 ease-in-out lg:absolute flex justify-center items-start flex-col z-20 lg:top-52 lg:right-[-420px] py-8 px-8 lg:w-[500px] lg:h-[480px]   lg:px-16 bg-white shadow-md">
+        class="section-3-card relative lg:absolute flex justify-center items-start flex-col z-20 lg:top-48 lg:right-[500px] py-8 px-8 lg:w-[500px]  lg:py-24 lg:px-16 bg-white shadow-md set-move-to-left">
         <h4 class="lg:text-3xl lg:mb-5  font-bold ">Real-time Visualization</h4>
-        <p class="font-light">Experience real-time visualization like never before. Our cutting-edge technology allows
+        <p class="font-light text-xl">Experience real-time visualization like never before. Our cutting-edge technology
+          allows
           you to explore your visions with unparalleled clarity and precision.
         </p>
-        <button
+        <button type="button"
           class="mt-5 lg:mt-8 lg:text-2xl border-2 bg-white text-black border-[#b1c08b] py-2 px-16 font-semibold  hover:bg-[#b1c08b] hover:text-white transition duration-500 ease-in-out">LEARN
           MORE
         </button>
@@ -205,55 +206,54 @@
     </section>
     <section
       class="bg-[url('../public/imgs/fgfgfg.jpg')] bg-cover bg-left lg:bg-center bg-no-repeat flex flex-col p-10 lg:px-56 lg:py-40 lg:h-[900px] ">
-      <p
-        class="duration-1000 ease-in-out opacity-0 bottom-[200px] relative  lg:ml-auto lg:w-[840px] lg:mb-16 lg:text-4xl text-2xl font-bold">
+      <p class="set-move-down lg:ml-auto lg:w-[840px] lg:mb-16 lg:text-4xl text-2xl font-bold">
         ​We design & deliver beautiful hotels,
         luxury
         homes
         and
         innovative workplace interiors</p>
       <div
-        class="lg:ml-auto h[360px] lg:w-[840px] flex lg:flex-row flex-col justify-between items-center lg:py-0 py-5 gap-y-5">
+        class="lg:ml-auto h[360px] lg:w-[840px] flex lg:flex-row flex-col justify-between items-center lg:py-0 py-5 gap-y-5 ">
         <div
-          class="card overflow-hidden  duration-300 ease-in-out opacity-0 h-0 flex flex-col gap-y-4 items-center text-center lg:w-[270px] shadow-lg bg-white px-10 py-14 ">
+          class="card flex flex-col gap-y-4 items-center text-center lg:w-[270px] shadow-lg bg-white px-10 py-14 set-move-up">
           <img class="w-24 " src="../public/imgs/kitchen-table.png" alt="" srcset="">
-          <p class="font-bold">PROJECTS</p>
+          <p class="font-bold text-xl">PROJECTS</p>
           <p class="text-gray-500">Embarking on a Journey of Artistry, Innovation, and Excellence in Design.</p>
         </div>
         <div
-          class="card delay-300 overflow-hidden  duration-300 ease-in-out opacity-0 h-0 flex flex-col gap-y-4 items-center text-center lg:w-[270px] shadow-lg bg-white px-10 py-14 ">
+          class="card flex flex-col gap-y-4 items-center text-center lg:w-[270px] shadow-lg bg-white px-10 py-14 set-move-down">
           <img class="w-24 " src="../public/imgs/interior-design.png" alt="" srcset="">
-          <p class="font-bold">GREATE DESIGN</p>
+          <p class="font-bold text-xl">GREATE DESIGN</p>
           <p class="text-gray-500">Setting the Standard for Creative Excellence, Innovation, and Elegance.</p>
         </div>
         <div
-          class="card delay-700 overflow-hidden  duration-300 ease-in-out opacity-0 h-0 flex flex-col gap-y-4 items-center text-center lg:w-[270px] shadow-lg bg-white px-10 py-14 ">
+          class="card flex flex-col gap-y-4 items-center text-center lg:w-[270px] shadow-lg bg-white px-10 py-14 set-move-up">
           <img class="w-24 " src="../public/imgs/kitchen-table.png" alt="" srcset="">
-          <p class="font-bold">HOME DECOR</p>
+          <p class="font-bold text-xl">HOME DECOR</p>
           <p class="text-gray-500">Revitalizing Living Spaces with Elegance, Comfort, and Personalized Style.</p>
         </div>
       </div>
     </section>
-    <section class="lg:p-40 lg:pr-96 text-center">
+    <section class="text-center relative lg:px-[450px] lg:py-[100px]">
       <img
-        class="  border-white border-[15px] shadow-md inline-block lg:w-[500px] lg:h-[600px] lg:relative lg:left-[400px] lg:bottom-[600px] z-10  duration-1000 ease-in-out opacity-0"
+        class="border-white border-[15px] shadow-md inline-block lg:w-[500px] relative lg:bottom-[180px] lg:left-[50px] lg:h-[600px] z-10 set-move-down"
         src="../public/imgs/painting-hanging-shelf-full-cacti-succulents_53876-110301.jpg" alt="" srcset="">
       <img
-        class="inline-block lg:w-[350px] shadow-md border-white border-[15px] lg:relative z-20 lg:right-[530px]  duration-1000 ease-in-out opacity-0"
+        class="absolute top-[430px] left-[290px] lg:w-[350px] shadow-md border-white border-[15px] z-20 set-move-to-right"
         src="../public/imgs/FVG.jpg" alt="">
       <div
-        class="inline-block bg-gray-100 relative shadow-md lg:top-[100px] lg:right-[-200px] text-start px-20 py-32 w-[450px] duration-1000 ease-in-out opacity-0">
+        class="bg-gray-100 relative shadow-md lg:top-[100px] text-start px-20 py-32 w-[450px] inline-block set-move-to-left">
         <p class="font-bold text-4xl mb-10">Interior Studio</p>
         <p class=" text-gray-500">Elegance and Innovation in Every Design. Exquisite Creations to Elevate Your Space.
           Masterpieces Crafted with Attention to Detail. Transforming Your Vision into Reality. Unparalleled Excellence
           in Interior Design.
         </p>
-        <button
+        <button type="button"
           class="border-black border px-4 py-3 mt-10 hover:text-white hover:bg-black duration-300 ease-in-out font-bold text-xl ">LEARN
           MORE</button>
       </div>
     </section>
-    <section class="overflow-hidden">
+    <section class="h-[450px]">
       <div class="w-[25%] lg:h-[450px] float-left relative">
         <img class="w-full object-cover object-bottom  h-[450px]" src="../public/imgs/pexels-photo-4142982.jpg" alt=""
           srcset="">
@@ -268,7 +268,7 @@
           class="absolute top-0 h-full w-full left-0 hover:bg-opacity-40 hover:bg-[#000]  z-20 duration-300 ease-in-out hover:cursor-pointer">
         </div>
       </div>
-      <div class="w-[25%]   lg:h-[450px] float-left relative">
+      <div class="w-[25%] lg:h-[450px] float-left relative">
         <img class="w-full h-[450px] object-cover object-bottom" src="../public/imgs/pexels-photo-905198.jpeg" alt=""
           srcset="">
         <div
@@ -316,13 +316,13 @@
       <img
         class="h-[1400px] lg:h-[700px] w-[900px] shadow-md object-cover object-right ml-auto lg:mr-[300px] lg:mt-[150px]"
         src="./imgs/dsddd-min.jpg" alt="" srcset="">
-      <button class="block ml-auto mr-auto mt-[-150px] z-50 relative lg:mt-16 lg:text-2xl border-4 border-[#b1c08b]  py-5 px-10 font-semibold hover:bg-[#b1c08b] hover:text-white transition
+      <button type="button" class="block ml-auto mr-auto mt-[-150px] z-50 relative lg:mt-16 lg:text-2xl border-4 border-[#b1c08b]  py-5 px-10 font-semibold hover:bg-[#b1c08b] hover:text-white transition
       duration-500 ease-in-out">LEARN MORE</button>
     </section>
     <section class="relative lg:px-72 lg:py-10 ">
       <div class="absolute lg:top-[45%] left-0 bg-[#b1c08b] lg:h-60 z-0 w-full"></div>
       <div
-        class="form inline-block px-10 py-20 shadow-2xl lg:relative lg:left-[-150px] z-50 duration-1000 ease-in-out opacity-0 bg-white top-[100px] lg:top-[100px] w-[413px] lg:w-[550px]">
+        class="form inline-block px-10 py-20 shadow-2xl relative z-50 bg-white top-[100px] lg:left-[120px] w-[413px] lg:w-[550px] set-move-to-right">
         <p class="font-bold text-3xl text-center mb-5">Contact Us</p>
         <form action="">
           <input placeholder="Enter your name"
@@ -336,7 +336,7 @@
         </form>
       </div>
       <img
-        class="inline-block lg:w-[600px] lg:h-[750px]  object-cover object-bottom duration-1000 ease-in-out opacity-0 lg:top-[-20px] lg:right-[-200px] relative z-10"
+        class="inline-block lg:w-[600px] lg:h-[750px]  object-cover object-bottom lg:top-[-20px] relative z-10 set-move-to-left"
         src="./imgs/painting-hanging-shelf-full-cacti-succulents_53876-110301.jpg" alt="" srcset="">
     </section>
   </main>

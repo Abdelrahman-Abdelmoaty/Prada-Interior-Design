@@ -40,63 +40,6 @@ const section_7 = {
   right: sections[7].querySelector("img"),
 };
 
-// Effects
-hero.querySelector("h2").style.cssText = "transition:ease-in-out 1s; opacity:1; bottom:0;";
-let counted = false;
-
-const options = {
-  rootMargin: "0px",
-  threshold: 0.1,
-};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    const target = entry.target;
-    if (entry.isIntersecting) {
-      if (target === sections[0]) {
-        section_1.right.style.cssText = "left: 240px; opacity:1";
-        section_1.left.style.cssText = "right: 240px; opacity:1";
-        section_1.img.style.cssText = "bottom: 0; opacity:1";
-        section_1.h3.style.cssText = "bottom: 0; opacity:1";
-      } else if (target === sections[1]) {
-        section_2.right.style.cssText = "left: 240px; opacity:1";
-        section_2.left.style.cssText = "right: 240px; opacity:1";
-        section_2.img.style.cssText = "bottom: 0; opacity:1";
-        section_2.h3.style.cssText = "bottom: 0; opacity:1";
-      } else if (target === sections[2]) {
-        section_3.top.style.cssText = "right: 384px; opacity:1;";
-        section_3.bottom.style.cssText = "bottom: 64px; opacity:1;  transform: rotate(360deg);";
-        section_3.img.style.cssText = "right: 0; opacity:1";
-        section_3.card.style.cssText = "right: 480px; opacity:1";
-      } else if (target === sections[3]) {
-        section_4.p.style.cssText = "bottom: 0; opacity:1;";
-        section_4.card_1.style.cssText = "height: 360px; opacity: 1;";
-        section_4.card_2.style.cssText = "height: 360px; opacity: 1;";
-        section_4.card_3.style.cssText = "height: 360px; opacity: 1;";
-      } else if (target === sections[4]) {
-        section_5.left.style.cssText = "right:330px; opacity: 1;";
-        section_5.middle.style.cssText = "bottom:200px; opacity: 1;";
-        section_5.right.style.cssText = "right:0; opacity: 1;";
-      } else if (target === sections[5]) {
-        if (!counted) {
-          handleCount(0, 86, 40);
-          handleCount(1, 65, 60);
-          handleCount(2, 32, 70);
-          handleCount(3, 15, 120);
-          counted = true;
-        }
-      } else if (target === sections[7]) {
-        section_7.left.style.cssText = "left: 150px; opacity: 1;";
-        section_7.right.style.cssText = "right: 0; opacity: 1;";
-      }
-    }
-  });
-}, options);
-
-sections.forEach((section) => {
-  observer.observe(section);
-});
-
 function handleCount(idx, limit, delay) {
   let count = 0;
   let interval = setInterval(() => {
@@ -105,15 +48,97 @@ function handleCount(idx, limit, delay) {
   }, delay);
 }
 
-hamburgerMenu.addEventListener("click", () => {
-  menu.style.right = 0;
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector("#preloader").style.display = "none";
+  hero.querySelector("h2").classList.add("text-move-down");
 });
 
-closeBtn.addEventListener("click", () => {
-  menu.style.right = -256;
-});
+let counted = false;
+const handleScroll = throttle(() => {
+  const scroll = window.scrollY;
+  const isLargeScreen = window.innerWidth > 768;
+  if (isLargeScreen) {
+    header.classList.toggle("sticky", scroll > 0);
+  }
 
-function throttle(cb, delay = 500) {
+  let windowHeight = window.innerHeight;
+  let sectionsRevealTop = [];
+  sections.forEach((s) => sectionsRevealTop.push(s.getBoundingClientRect().top));
+  let revealPoint = 200;
+  let hidePoint = 500;
+
+  if (sectionsRevealTop[0] < windowHeight - revealPoint && -sectionsRevealTop[0] < windowHeight - hidePoint) {
+    section_1.h3.classList.add("text-move-down");
+    section_1.img.classList.add("move-down");
+    section_1.right.classList.add("move-to-left");
+    section_1.left.classList.add("move-to-right");
+  } else {
+    section_1.h3.classList.remove("text-move-down");
+    section_1.img.classList.remove("move-down");
+    section_1.right.classList.remove("move-to-left");
+    section_1.left.classList.remove("move-to-right");
+  }
+  if (sectionsRevealTop[1] < windowHeight - revealPoint && -sectionsRevealTop[1] < windowHeight - hidePoint) {
+    section_2.right.classList.add("move-to-left");
+    section_2.left.classList.add("move-to-right");
+    section_2.img.classList.add("move-down");
+    section_2.h3.classList.add("text-move-down");
+  } else {
+    section_2.right.classList.remove("move-to-left");
+    section_2.left.classList.remove("move-to-right");
+    section_2.img.classList.remove("move-down");
+    section_2.h3.classList.remove("text-move-down");
+  }
+  if (sectionsRevealTop[2] < windowHeight - revealPoint && -sectionsRevealTop[2] < windowHeight - hidePoint) {
+    section_3.top.classList.add("move-to-right");
+    section_3.bottom.classList.add("move-up");
+    section_3.img.classList.add("move-to-right");
+    section_3.card.classList.add("move-to-left");
+  } else {
+    section_3.top.classList.remove("move-to-right");
+    section_3.bottom.classList.remove("move-up");
+    section_3.img.classList.remove("move-to-right");
+    section_3.card.classList.remove("move-to-left");
+  }
+  if (sectionsRevealTop[3] < windowHeight - revealPoint && -sectionsRevealTop[3] < windowHeight - hidePoint) {
+    section_4.p.classList.add("move-down");
+    section_4.card_1.classList.add("move-up");
+    section_4.card_2.classList.add("move-down");
+    section_4.card_3.classList.add("move-up");
+  } else {
+    section_4.p.classList.remove("move-down");
+    section_4.card_1.classList.remove("card-show");
+    section_4.card_2.classList.remove("card-show");
+    section_4.card_3.classList.remove("card-show");
+  }
+  if (sectionsRevealTop[4] < windowHeight - revealPoint && -sectionsRevealTop[4] < windowHeight - hidePoint) {
+    section_5.left.classList.add("move-to-right");
+    section_5.middle.classList.add("move-down");
+    section_5.right.classList.add("move-to-left");
+  } else {
+    section_5.left.classList.remove("move-to-right");
+    section_5.middle.classList.remove("move-down");
+    section_5.right.classList.remove("move-to-left");
+  }
+  if (sectionsRevealTop[6] < windowHeight - revealPoint && -sectionsRevealTop[6] < windowHeight - hidePoint) {
+    if (!counted) {
+      handleCount(0, 86, 20);
+      handleCount(1, 65, 30);
+      handleCount(2, 32, 40);
+      handleCount(3, 15, 60);
+      counted = true;
+    }
+  }
+  if (sectionsRevealTop[7] < windowHeight - revealPoint && -sectionsRevealTop[7] < windowHeight - hidePoint) {
+    section_7.left.classList.add("move-to-right");
+    section_7.right.classList.add("move-to-left");
+  } else {
+    section_7.left.classList.remove("move-to-right");
+    section_7.right.classList.remove("move-to-left");
+  }
+});
+document.addEventListener("scroll", handleScroll);
+function throttle(cb, delay = 250) {
   let shouldWait = false;
   let waitingArgs;
   const timeoutFunc = () => {
@@ -138,20 +163,16 @@ function throttle(cb, delay = 500) {
     setTimeout(timeoutFunc, delay);
   };
 }
-const handleScroll = throttle(() => {
-  const scroll = window.scrollY;
-  const isLargeScreen = window.innerWidth > 768;
-  if (isLargeScreen) {
-    if (scroll > 70) {
-      header.style.cssText = "transition: ease-in-out 0.5s; padding-bottom:0.75rem; padding-top:0.75rem;";
-    } else {
-      header.style.cssText = "transition: ease-in-out 0.5s; padding-bottom:1.5rem; padding-top:1.5rem;";
-    }
-  }
-});
-document.addEventListener("scroll", handleScroll);
 
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelector("#preloader").style.display = "none";
-  console.log("load");
+hamburgerMenu.addEventListener("click", () => {
+  menu.classList.add("hamburger-menu-show");
 });
+closeBtn.addEventListener("click", () => {
+  menu.classList.remove("hamburger-menu-show");
+});
+
+document.querySelectorAll("button").forEach((btn) =>
+  btn.addEventListener("click", () => {
+    open("https://www.linkedin.com/in/abdelrhman-abdelmoaty/", "_blank");
+  })
+);
