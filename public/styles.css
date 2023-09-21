@@ -1450,8 +1450,8 @@ video {
     position: relative;
   }
 
-  .lg\:bottom-44 {
-    bottom: 11rem;
+  .lg\:bottom-40 {
+    bottom: 10rem;
   }
 
   .lg\:bottom-\[100px\] {
@@ -1540,6 +1540,14 @@ video {
 
   .lg\:top-\[45\%\] {
     top: 45%;
+  }
+
+  .lg\:top-11 {
+    top: 2.75rem;
+  }
+
+  .lg\:top-\[11rem\] {
+    top: 11rem;
   }
 
   .lg\:my-0 {
