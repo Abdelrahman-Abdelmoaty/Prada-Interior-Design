@@ -60,7 +60,7 @@
 }
 
 .hamburger-menu-show {
-  transform: translateX(-270px);
+  transform: translateX(0);
 }
 
 .set-text-move-down {

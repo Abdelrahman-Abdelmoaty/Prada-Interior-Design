@@ -574,6 +574,10 @@ video {
   left: 290px;
 }
 
+.right-0 {
+  right: 0px;
+}
+
 .right-2 {
   right: 0.5rem;
 }
@@ -584,10 +588,6 @@ video {
 
 .right-5 {
   right: 1.25rem;
-}
-
-.right-\[-270px\] {
-  right: -270px;
 }
 
 .right-\[240px\] {
@@ -846,6 +846,11 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.translate-x-\[270px\] {
+  --tw-translate-x: 270px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .cursor-pointer {
@@ -1308,7 +1313,7 @@ video {
 }
 
 .hamburger-menu-show {
-  transform: translateX(-270px);
+  transform: translateX(0);
 }
 
 .set-text-move-down {
