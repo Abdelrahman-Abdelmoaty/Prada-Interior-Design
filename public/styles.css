@@ -586,8 +586,8 @@ video {
   right: 1.25rem;
 }
 
-.right-\[-256px\] {
-  right: -256px;
+.right-\[-270px\] {
+  right: -270px;
 }
 
 .right-\[240px\] {
@@ -1308,7 +1308,7 @@ video {
 }
 
 .hamburger-menu-show {
-  transform: translateX(-256px);
+  transform: translateX(-270px);
 }
 
 .set-text-move-down {
@@ -1450,10 +1450,6 @@ video {
     position: relative;
   }
 
-  .lg\:bottom-40 {
-    bottom: 10rem;
-  }
-
   .lg\:bottom-\[100px\] {
     bottom: 100px;
   }
@@ -1534,20 +1530,16 @@ video {
     top: 100px;
   }
 
+  .lg\:top-\[11rem\] {
+    top: 11rem;
+  }
+
   .lg\:top-\[250px\] {
     top: 250px;
   }
 
   .lg\:top-\[45\%\] {
     top: 45%;
-  }
-
-  .lg\:top-11 {
-    top: 2.75rem;
-  }
-
-  .lg\:top-\[11rem\] {
-    top: 11rem;
   }
 
   .lg\:my-0 {
