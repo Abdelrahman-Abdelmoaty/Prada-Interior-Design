@@ -107,9 +107,9 @@ const handleScroll = throttle(() => {
     section_4.card_3.classList.add("move-up");
   } else {
     section_4.p.classList.remove("move-down");
-    section_4.card_1.classList.remove("card-show");
-    section_4.card_2.classList.remove("card-show");
-    section_4.card_3.classList.remove("card-show");
+    section_4.card_1.classList.remove("move-up");
+    section_4.card_2.classList.remove("move-down");
+    section_4.card_3.classList.remove("move-up");
   }
   if (sectionsRevealTop[4] < windowHeight - (isLargeScreen ? revealPoint : 500) && -sectionsRevealTop[4] < windowHeight - (isLargeScreen ? revealPoint : -100)) {
     console.log("in");
